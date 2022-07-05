@@ -1,0 +1,19 @@
+public class CustomerSearch {
+	//Search customer by Country, CompanyName, ContactPerson, CustomerId etc
+	public List <Customer> SearchByCustomerDetail(String customerDetail) {
+		var query = from c in db.customers where c.Country.Contains(customerDetail) orderby c.CustomerID ascending select c;
+	  	return query.ToList();
+	}
+	public string ExportToCSV(List <Customer> data)
+	{
+		StringBuilder sb = new StringBuilder();
+		foreach(var item in data) {
+    			sb.AppendFormat("{0},{1}, {2}, {3}", item.CustomerID, item.CompanyName, item.ContactName, item.Country);
+			sb.AppendLine();
+	}
+
+	return sb.ToString();
+
+	}
+
+} 

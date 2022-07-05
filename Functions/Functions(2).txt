@@ -1,0 +1,30 @@
+using System;
+using System.Numerics;
+class MyClass {
+    public Long calculateMean(long[] array, var[] RL) {
+    		return (long)((long)(array[RL[1]] - array[RL[0] - 1]) / (RL[1] - RL[0] + 1));
+    }
+
+    public long[] getArray(var[] arr, var[] NQ) {
+		long[] sumarr = new long[NQ[0] + 1];
+            sumarr[0] = 0;
+            for (int i = 1; i <= NQ[0]; i++)
+            {
+                sumarr[i] = sumarr[i - 1] + arr[i - 1];
+            }
+		return sumarr;
+
+	}
+
+    static void Main(string[] args) {
+       var NQ = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            var arr = Array.ConvertAll(Console.ReadLine().Split(' '), long.Parse);
+            long[] sumarr = getArray(arr, NQ);
+            for (var x = 0; x < NQ[1]; x++)
+            {
+                var RL = Array.ConvertAll(Console.ReadLine().Split(' '), int.
+                Console.WriteLine(calculateMean(sumarr, RL);
+            }
+    }
+}
+ 
