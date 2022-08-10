@@ -1,0 +1,56 @@
+public class Customer {
+    private String firstName;
+    private String lastName;
+    public String getFirstName()
+    {
+        return this.firstName;
+    }
+
+    public String getLastName(){
+        return this.lastName;
+    }
+}
+
+
+
+
+public class Wallet {
+    private static float value;
+
+    public static void setValue(float value) {
+        Wallet.value = value;
+    }
+
+    public float getTotalMoney() {
+        return this.value;
+    }
+
+    public static void setTotalMoney(float newValue) {
+        value = newValue;
+    }
+
+    public static void addMoney(float deposit) {
+        value += deposit;
+    }
+
+    public static void subtractMoney(float debit) {
+        value -= debit;
+    }
+}
+
+
+
+public class Client {
+    public static void main(String[] arg) {
+        float payment = 2;
+        Wallet wallet = new Wallet();
+        float totalMoney = wallet.getTotalMoney();
+
+        if(totalMoney >= payment) {
+            Wallet.subtractMoney(payment);
+        } else {
+            // come back later and get my money
+            System.out.println("come back later and get my money");
+        }
+    }
+}

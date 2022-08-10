@@ -1,0 +1,17 @@
+public class Employee {
+    String name;
+    int age;
+    float salary;
+    public String getName();
+    public void setName(String name);
+    public int getAge();
+    public void setAge(int age);
+    public float getSalary();
+    public void setSalary(float salary);
+};
+
+Employee employee;
+
+
+Here, Employee is the Data Structure. 
+As the Employee has no specified behavior, but has the attributes of employee that I need to assign and use it in run time.
