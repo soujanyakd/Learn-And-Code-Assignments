@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class TDDTest {
+public class UnitTestAssignment {
 
     public void verifyUserProvidedNumberIsANaturalNumber(int number) {
         if(number <= 0) {
